@@ -12,7 +12,7 @@ public class WaveGenerator : MonoBehaviour {
 		GameObject obj = Instantiate(Resources.Load("Prefabs/Wave")) as GameObject;
 		obj.transform.position = new Vector3(0, 0, 30);
 		Rigidbody [] children = obj.GetComponentsInChildren<Rigidbody>();
-		int redCount = 0;
+
 		for(int i = 0; i < children.Length; ++i) {
 			children[i].velocity = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), Random.Range(-3.0f, -8.0f));
 			children[i].angularVelocity = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
